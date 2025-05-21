@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Image - GitHub Pages</title>
+</head>
+<body>
+    <h2>Random Image</h2>
+    <img id="randomImage" width="400">
+
+    <script>
+        const images = [
+            'images/img1.jpg',
+            'images/img2.jpg',
+            'images/img3.jpg'
+        ];
+        const random = Math.floor(Math.random() * images.length);
+        document.getElementById('randomImage').src = images[random];
+    </script>
+</body>
+</html>
