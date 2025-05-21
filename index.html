@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Random Image - GitHub Pages</title>
+  <title>Auto Load Latest Image</title>
 </head>
 <body>
-    <h2>Random Image</h2>
-    <img id="randomImage" width="400">
+  <h2>Auto-Reloading Image</h2>
+  <img id="latestImage" width="400">
 
-    <script>
-        const images = [
-            'images/img1.jpg',
-            'images/img2.jpg',
-            'images/img3.jpg'
-        ];
-        const random = Math.floor(Math.random() * images.length);
-        document.getElementById('randomImage').src = images[random];
-    </script>
+  <script>
+    const img = document.getElementById('latestImage');
+    const timestamp = new Date().getTime(); // prevent cache
+    img.src = `images/test.jpg?${timestamp}`;
+  </script>
 </body>
 </html>
