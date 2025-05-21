@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Auto Load Latest Image</title>
-</head>
-<body>
-  <h2>Auto-Reloading Image</h2>
-  <img id="latestImage" width="400">
 
-  <script>
-    const img = document.getElementById('latestImage');
-    const timestamp = new Date().getTime(); // prevent cache
-    img.src = `image/test.jpg?${timestamp}`;
-  </script>
+  <!-- Open Graph for Facebook, LinkedIn, etc. -->
+  <meta property="og:title" content="Check out this image!" />
+  <meta property="og:description" content="Latest updated image from my GitHub page." />
+  <meta property="og:image" content="https://YOUR_USERNAME.github.io/YOUR_REPO/images/test.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://YOUR_USERNAME.github.io/YOUR_REPO/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Check out this image!">
+  <meta name="twitter:description" content="Latest updated image from my GitHub page.">
+  <meta name="twitter:image" content="https://YOUR_USERNAME.github.io/YOUR_REPO/images/test.jpg">
+</head>
+
+<body>
+  <h2>Latest Uploaded Image</h2>
+  <img src="images/test.jpg" width="400" alt="Latest Image">
 </body>
 </html>
